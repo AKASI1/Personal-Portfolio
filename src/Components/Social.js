@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Facebook, Github, LinkedIn, Instgram } from "./SVGS";
+import { Github, LinkedIn, Instgram } from "./SVGS";
 import { DarkTheme } from "./Themes";
 
 /*________________________________________________________________*/
@@ -78,18 +78,7 @@ const Social = (props) => {
           fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
         />
       </Link>
-      <Link
-        initial={{ transform: "scale(0)" }}
-        animate={{ scale: [0, 1, 2, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.4 }}
-        to={{ pathname: "https://www.facebook.com/AhmedKASI777/" }}
-        target={"-blank"}
-      >
-        <Facebook
-          width={props.isPhone ? 20 : 25}
-          fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
-        />
-      </Link>
+
       <Link
         initial={{ transform: "scale(0)" }}
         animate={{ scale: [0, 1, 2, 1] }}
@@ -102,9 +91,10 @@ const Social = (props) => {
           fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
         />
       </Link>
+
       <Line
         initial={{ height: 0 }}
-        animate={{ height: `${props.isPhone ? "5rem" : "8rem"}` }}
+        animate={{ height: `${props.isPhone ? "3rem" : "5rem"}` }}
         transition={{ type: "spring", duration: 1, delay: 0.8 }}
         theme={props.theme}
       />

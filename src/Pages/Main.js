@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import Intro from "../Components/Intro";
 import Logo from "../Components/Logo";
@@ -45,11 +45,11 @@ const Contact = styled.div`
   z-index: 1;
 `;
 /*________________________________________________________________*/
-const Map = styled.div`
+const CV = styled.div`
   color: ${(props) =>
     props.isPhone && props.isClicked ? props.theme.body : props.theme.text};
   position: absolute;
-  top: 50%;
+  top: 52%;
   right: calc(1rem + 2vw);
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
@@ -205,8 +205,15 @@ const Main = (props) => {
           </Contact>
         </NavLink>
 
-        <NavLink to={"/Map"}>
-          <Map
+        <Link
+          to={{
+            pathname:
+              "https://drive.google.com/file/d/17XJ0U2WZxdGJLf3UxQnCy-PKFU4HK8he/view?usp=sharing",
+          }}
+          target={"_blank"}
+          style={{ fontSize: "14px" }}
+        >
+          <CV
             isClicked={+clicked}
             isPhone={+props.isPhone}
             onClick={() => setAni({ x: "-200vh" })}
@@ -223,10 +230,10 @@ const Main = (props) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.8 }}
             >
-              Map
+              My CV
             </motion.h2>
-          </Map>
-        </NavLink>
+          </CV>
+        </Link>
 
         <NavLink to={"/Work"}>
           <Work

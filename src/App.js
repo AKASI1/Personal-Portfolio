@@ -12,7 +12,7 @@ const Main = React.lazy(() => import("./Pages/Main"));
 const About = React.lazy(() => import("./Pages/About"));
 const Skills = React.lazy(() => import("./Pages/Skills"));
 const Work = React.lazy(() => import("./Pages/Work"));
-const Map = React.lazy(() => import("./Pages/Map"));
+// const Cv = React.lazy(() => import("./Pages/Cv"));
 /*__________________________________________________________________________________________________*/
 
 function App() {
@@ -46,9 +46,9 @@ function App() {
               <Work isPhone={+isPhone} />
             </Route>
 
-            <Route exact path={"/Map"}>
-              <Map isPhone={+isPhone} />
-            </Route>
+            {/* <Route exact path={"/Cv"}>
+              <Cv isPhone={+isPhone} />
+            </Route> */}
           </Switch>
         </AnimatePresence>
       </Suspense>

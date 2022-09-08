@@ -61,7 +61,7 @@ const Main = styled(motion.div)`
   font-style: italic;
   /*_____________________________*/
   @media (max-width: 767px) {
-    width: 50vw;
+    width: 52vw;
     height: auto;
     top: 56.5%;
     left: 50%;
@@ -98,12 +98,13 @@ const About = (props) => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          I'm a front-end developer located in Egypt. I love to create simple
-          yet beautiful websites with great user experience.
+          I'm an innovative Full-Stack Software Engineer with 1- year of
+          experience building and maintaining responsive websites in the
+          recruiting industry.
           <br /> <br />
           I'm interested in the whole Web full stack Like trying new things and
           building great projects. I'm an independent freelancer. I love
-          knowledge, studing and read books.
+          knowledge, studing and learning new technologies.
           <br /> <br />I believe everything is an Art when you put your
           consciousness in it. You can connect with me via social links.
         </Main>

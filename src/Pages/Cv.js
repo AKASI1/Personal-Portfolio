@@ -5,11 +5,13 @@ import Social from "../Components/Social";
 import Power from "../Components/Power";
 import PageTitle from "../Components/PageTitle";
 import { motion } from "framer-motion";
+import CV from "../assets/Images/AhmedKhaled-cv.jpg";
+import { NavLink } from "react-router-dom";
 
 /*________________________________________________________________*/
 const MainContainer = styled(motion.div)`
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   background-image: url(${img});
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,6 +24,13 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .cv {
+    margin: 100px 0 20px;
+  }
 `;
 /*________________________________________________________________*/
 // Framer-motion config
@@ -38,7 +47,7 @@ const container = {
 };
 /*________________________________________________________________*/
 
-const Map = (props) => {
+const Cv = (props) => {
   return (
     <MainContainer
       variants={container}
@@ -54,10 +63,19 @@ const Map = (props) => {
         <Power />
         <Social isPhone={+props.isPhone} />
 
+        <NavLink
+          to={
+            "https://drive.google.com/file/d/17XJ0U2WZxdGJLf3UxQnCy-PKFU4HK8he/view?usp=sharing"
+          }
+          target={"_blank"}
+        >
+          <img src={CV} alt="cv" className="cv" />
+        </NavLink>
+
         <PageTitle text="BLOG" top="5rem" left="5rem" />
       </Container>
     </MainContainer>
   );
 };
 
-export default Map;
+export default Cv;

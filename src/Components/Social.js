@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Github, LinkedIn, Instgram } from "./SVGS";
+import { Github, LinkedIn, Instgram, Whatsapp } from "./SVGS";
 import { DarkTheme } from "./Themes";
 
 /*________________________________________________________________*/
@@ -92,9 +92,22 @@ const Social = (props) => {
         />
       </Link>
 
+      <Link
+        initial={{ transform: "scale(0)" }}
+        animate={{ scale: [0, 1, 2, 1] }}
+        transition={{ type: "spring", duration: 1, delay: 1.6 }}
+        to={{ pathname: "https://wa.me/+2001030903325" }}
+        target={"-blank"}
+      >
+        <Whatsapp
+          width={props.isPhone ? 23 : 29}
+          fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+        />
+      </Link>
+
       <Line
         initial={{ height: 0 }}
-        animate={{ height: `${props.isPhone ? "3rem" : "5rem"}` }}
+        animate={{ height: `${props.isPhone ? "3.5rem" : "5rem"}` }}
         transition={{ type: "spring", duration: 1, delay: 0.8 }}
         theme={props.theme}
       />

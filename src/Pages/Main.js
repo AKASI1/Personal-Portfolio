@@ -208,7 +208,7 @@ const Main = (props) => {
         <Link
           to={{
             pathname:
-              "https://drive.google.com/file/d/17XJ0U2WZxdGJLf3UxQnCy-PKFU4HK8he/view?usp=sharing",
+              "https://drive.google.com/file/d/1DARpt8dYAaGHdS8TEpuHwcn2AkyiuZUW/view?usp=sharing",
           }}
           target={"_blank"}
           style={{ fontSize: "14px" }}

@@ -7,8 +7,8 @@ import { Github } from "./SVGS";
 /*________________________________________________________________*/
 
 const Box = styled(motion.li)`
-  width: 16rem;
-  height: 40vh;
+  width: 20rem;
+  height: 55vh;
   background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
   padding: 1.5rem 2rem;
@@ -31,9 +31,13 @@ const Box = styled(motion.li)`
   }
   /*________________________________*/
   & p {
-    font-size: calc(0.8em + 0.3vw);
+    font-size: calc(0.8em + 0.2vw);
     font-family: "Karla", sans-serif;
     font-weight: 500;
+  }
+  /*________________________________*/
+  .pageImg {
+    border-radius: 4px;
   }
   /*________________________________*/
   & .tags {
@@ -67,7 +71,7 @@ const Box = styled(motion.li)`
     transition: 0.3s;
   }
   & .link:hover {
-    transform:scale(1.07)
+    transform: scale(1.07);
   }
   /*________________________________*/
   &:hover .link {
@@ -79,7 +83,7 @@ const Box = styled(motion.li)`
     transition: 0.3s;
   }
   & .git:hover > * {
-    width:33px
+    width: 33px;
   }
   /*________________________________*/
   &:hover .git > * {
@@ -88,8 +92,8 @@ const Box = styled(motion.li)`
   /*________________________________*/
   @media (max-width: 767px) {
     margin-right: 4rem;
-    height: 35vh;
-    width: 13rem;
+    height: 50vh;
+    width: 15rem;
   }
 `;
 /*________________________________________________________________*/
@@ -105,6 +109,10 @@ const Card = (props) => {
     <Box variants={item}>
       <h2>{props.data.name}</h2>
       <p>{props.data.description}</p>
+
+      {props.data.image && (
+        <img src={props.data.image} alt="page" className="pageImg" />
+      )}
 
       <div className="tags">
         {props.data.tags.map((t, idx) => (

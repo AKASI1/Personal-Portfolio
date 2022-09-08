@@ -12,11 +12,15 @@ import PageTitle from "../Components/PageTitle";
 
 /*________________________________________________________________*/
 const Box = styled(motion.div)`
-  height: 400vh;
+  height: 500vh;
   background-color: ${(props) => props.theme.body};
   position: relative;
   display: flex;
   align-items: center;
+  /*_____________________________*/
+  @media (max-width: 767px) {
+    height: 460vh;
+  }
 `;
 /*________________________________________________________________*/
 const Rotate = styled.div`
@@ -31,14 +35,14 @@ const Rotate = styled.div`
 const Main = styled(motion.ul)`
   position: fixed;
   top: 12rem;
-  left: calc(10rem + 15vw);
+  left: calc(10rem + 10vw);
   height: 40vh;
   display: flex;
   color: white;
   /*_____________________________*/
   @media (max-width: 767px) {
-    top: 30%;
-    left: calc(1rem + 15vw);
+    top: 25%;
+    left: calc(1rem + 10vw);
   }
 `;
 /*________________________________________________________________*/

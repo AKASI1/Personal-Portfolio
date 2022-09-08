@@ -51,6 +51,7 @@ const Title = styled.h2`
   justify-content: center;
   align-items: center;
   font-size: calc(1em + 1vw);
+  margin-bottom: 15px;
   /*_____________________________*/
   & > * {
     transition: 0.3s;
@@ -64,6 +65,12 @@ const Title = styled.h2`
   /*_____________________________*/
   & > :first-child {
     margin-right: 1rem;
+  }
+  /*_____________________________*/
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 5px;
+    font-size: calc(0.8em + 0.7vw);
   }
 `;
 /*________________________________________________________________*/
@@ -98,7 +105,7 @@ const Skills = (props) => {
         <Skill>
           <Title>
             <Develope width={40} />
-            Frontend Developer
+            Full-Stack Web Developer
           </Title>
 
           <Description>
@@ -109,14 +116,15 @@ const Skills = (props) => {
           <Description>
             <strong>SKILLS</strong>
             <p>
-              Html, Css, Js, React, Redux, Sass, Bootstrap, NextJs, Firebase
-              etc.
+              ReactJs(Redux, Router), JS( API, JSON), TypeScript, SASS/SCSS,
+              Material UI, Bootstrap, Tailwind, NodeJs, SQL, MongoDB, AWS,
+              Scrum/Agile, Unit Testing etc.
             </p>
           </Description>
 
           <Description>
             <strong>TOOLS</strong>
-            <p>VScode, Github, Codepen etc.</p>
+            <p>VScode, Github, Codepen, CircleCI etc.</p>
           </Description>
         </Skill>
 

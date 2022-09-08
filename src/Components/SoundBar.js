@@ -13,7 +13,7 @@ const Box = styled.div`
   /*_____________________________*/
   @media (max-width: 767px) {
     left: 1rem;
-    top: 10rem;
+    top: 9rem;
   }
   /*_____________________________*/
   & > *:nth-child(1) {
